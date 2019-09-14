@@ -141,19 +141,19 @@ heroku config:set BOT_ID=INSERT_YOUR_BOT_ID_HERE
 
 ## Start the server
 
-To test your bot locally, open terminal and run the following command to start a local server.
+To test your bot locally, open terminal and install dependencies:
 
 ```sh
-npm start
+pip3 install -r requirements.txt
 ```
 
-or
+Then start a local server.
 
 ```sh
-node index.js
+gunicorn bot:app
 ```
 
-Then navigate to `http://localhost:5000` in a browser.
+Then navigate to `http://localhost:8000` in a browser.
 
 ![Local bot](http://i.groupme.com/502x133.png.f06c630467954f5dab4c742dc67b71bf)
 
