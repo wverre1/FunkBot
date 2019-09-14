@@ -122,23 +122,21 @@ And then change directory into the new folder
 cd YOUR_APP_NAME_HERE
 ```
 
-## Configure your local BOT_ID environment variable
+## Configure your local `BOT_ID` environment variable
 
-Open the file `.env` from your local files in your text editor of choice.
-Find where it says "YOUR_BOT_ID_HERE" and replace it with the ID of your new bot.
+You will need to set the `BOT_ID` environment variable so that your bot will know where to send its messages.
 
 If you don't know what your Bot ID is, please refer back to [this](#get-bot-id) section, where it is explained how to retrieve it.
 
-If your Bot ID is 12345678910, then:
-
+In your terminal, run
 ```sh
-BOT_ID="YOUR_BOT_ID_HERE"
+export BOT_ID=INSERT_YOUR_BOT_ID_HERE
 ```
+You may wish to add this to a file that runs each time you start your shell, such as `~/.bashrc`.
 
-becomes:
-
+For Heroku, run:
 ```sh
-BOT_ID="12345678910"
+heroku config:set BOT_ID=INSERT_YOUR_BOT_ID_HERE
 ```
 
 ## Start the server
@@ -155,7 +153,7 @@ or
 node index.js
 ```
 
-Then navigate to `http://127.0.0.1:5000/` in a browser.
+Then navigate to `http://localhost:5000` in a browser.
 
 ![Local bot](http://i.groupme.com/502x133.png.f06c630467954f5dab4c742dc67b71bf)
 
