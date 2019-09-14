@@ -150,8 +150,12 @@ pip3 install -r requirements.txt
 Then start a local server.
 
 ```sh
-gunicorn bot:app
+FLASK_APP=bot.py flask run
 ```
+or use gunicorn to imitate the production Heroku environment:
+```sh
+gunicorn bot:app
+``
 
 Then navigate to `http://localhost:8000` in a browser.
 
