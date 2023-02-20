@@ -32,9 +32,10 @@ def receive():
 
 def send(msg):
     url  = 'https://api.groupme.com/v3/bots/post'
-
+    print("trying to send something")
     data = {
           'bot_id' : os.getenv('BOT_ID'),
           'text'   : msg,
          }
+    print(data)
     r = requests.post(url, data=data)
