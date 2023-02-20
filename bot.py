@@ -39,3 +39,4 @@ def send(msg):
          }
     print(data)
     r = requests.post(url, data=data)
+    print(r)
