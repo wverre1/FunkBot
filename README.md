@@ -1,9 +1,8 @@
-# Sample GroupMe Python Bot
-**Python** | [**JavaScript**](https://github.com/groupme/bot-tutorial-nodejs)
+# GroupMe FunkBot in Python
 
 ## Introduction
 
-A simple GroupMe bot that reacts to messages sent within a group.
+A GroupMe bot that sends a homerun graphic tweet when one is sent by LSUBaseballData
 
 ## Contents
 
