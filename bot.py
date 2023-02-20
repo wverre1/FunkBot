@@ -38,5 +38,6 @@ def send(msg):
           'text'   : msg,
          }
     print(data)
-    r = requests.post(url, data=data)
-    print(r)
+    request = Request(url, urlencode(data).encode())
+    json = urlopen(request).read().decode()
+    print(json)
