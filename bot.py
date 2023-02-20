@@ -38,6 +38,5 @@ def send(msg):
           'text'   : msg,
          }
     print(data)
-    request = Request(url, urlencode(data).encode())
-    json = urlopen(request).read().decode()
-    print(json)
+    response = requests.post("https://api.groupme.com/v3/bots/post", json=data)
+    print(response)
