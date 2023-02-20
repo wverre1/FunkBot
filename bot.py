@@ -5,6 +5,8 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+msg="it works!"
+
 @app.route('/', methods=['GET'])
 def home():
     return 'You could put any content here you like, perhaps even a homepage for your bot!'
@@ -12,6 +14,10 @@ def home():
 
 @app.route('/', methods=['POST'])
 def receive():
+    data = {
+        'bot_id': os.getenv('BOT_ID'),
+        'text': msg,
+    }
     print('Incoming message:')
     print(data)
 
