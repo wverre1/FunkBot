@@ -23,7 +23,9 @@ def receive():
     # Prevent self-reply
     if data['sender_type'] != 'bot':
         if data['text'].startswith('/ping'):
-            send(data['name'] + ' pinged me!')
+            message=data['name'] + ' pinged me!'
+            print(message)
+            send(message)
 
     return 'ok', 200
 
