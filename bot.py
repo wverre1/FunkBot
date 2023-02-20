@@ -1,5 +1,6 @@
 import os
 import json
+import requests
 
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -34,5 +35,4 @@ def send(msg):
           'bot_id' : os.getenv('BOT_ID'),
           'text'   : msg,
          }
-    request = Request(url, urlencode(data).encode())
-    json = urlopen(request).read().decode()
+    r = requests.post(url, data=data)
