@@ -14,10 +14,7 @@ def home():
 
 @app.route('/', methods=['POST'])
 def receive():
-    data = {
-        'bot_id': os.getenv('BOT_ID'),
-        'text': msg,
-    }
+    data = request.get_json()
     print('Incoming message:')
     print(data)
 
